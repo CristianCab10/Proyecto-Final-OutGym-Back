@@ -25,7 +25,7 @@ const crearUsuarioServices = async (body) => {
         const carritoUsuario = new CarritosModel({idUsuario: nuevoUsuario._id})
         nuevoUsuario.password = await argon.hash(nuevoUsuario.password)
         nuevoUsuario.idCarrito = carritoUsuario._id
-        const {statusCode, error} = await registroExitoso(body.emailUsuario, body.nombreUsuario)
+        //const {statusCode, error} = await registroExitoso(body.emailUsuario, body.nombreUsuario) 
         if (statusCode === 200) {
             await nuevoUsuario.save()
             await carritoUsuario.save()
@@ -40,7 +40,7 @@ const crearUsuarioServices = async (body) => {
                 statusCode
             }
         }
-    } catch {
+    } catch (error){
         return {
             error,
             statusCode: 500
