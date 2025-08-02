@@ -26,20 +26,13 @@ const crearUsuarioServices = async (body) => {
         nuevoUsuario.password = await argon.hash(nuevoUsuario.password)
         nuevoUsuario.idCarrito = carritoUsuario._id
         //const {statusCode, error} = await registroExitoso(body.emailUsuario, body.nombreUsuario) 
-        if (statusCode === 200) {
             await nuevoUsuario.save()
             await carritoUsuario.save()
             return {
             msg: "Usuario creado",
             statusCode: 201
             }
-        }
-        else {
-            return{
-                error,
-                statusCode
-            }
-        }
+        
     } catch (error){
         return {
             error,
