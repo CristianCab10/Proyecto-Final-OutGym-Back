@@ -116,4 +116,37 @@ const cambioPassUserTokenServices = async (token, newPass) => {
     }
 }
 
-module.exports = { obtenerTodosLosUsuariosServices, obtenerUsuarioPorIdServices, crearUsuarioServices, iniciarSesionServices, recuperarPassUserServices, cambioPassUserTokenServices }
+const actualizarUsuarioServices = async (idUsuario, body) => {
+    try {
+        const usuarioActualizado = await UsuariosModel.findByIdAndUpdate(idUsuario, body, { new: true })
+        return {
+            msg: "Usuario actualizado",
+            usuario: usuarioActualizado,
+            statusCode: 200
+        }
+    } catch (error) {
+        return {
+            error,
+            statusCode: 500
+        }
+    }
+}
+
+const eliminarUsuarioServices = async (idUsuario) => {
+    try {
+        await UsuariosModel.findByIdAndDelete(idUsuario)
+        return {
+            msg: "Usuario eliminado",
+            statusCode: 200
+        }
+    } catch (error) {
+        return {
+            error,
+            statusCode: 500
+        }
+    }
+}
+
+
+
+module.exports = { obtenerTodosLosUsuariosServices, obtenerUsuarioPorIdServices, crearUsuarioServices, iniciarSesionServices, recuperarPassUserServices, cambioPassUserTokenServices, actualizarUsuarioServices, eliminarUsuarioServices }
