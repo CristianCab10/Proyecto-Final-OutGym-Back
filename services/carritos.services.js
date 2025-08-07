@@ -1,4 +1,6 @@
-const CarritosModel = require("../models/carritoModel")
+/*const ProductosModel = require("../models/productModel"); */
+const { MercadoPagoConfig, Preference } = require("mercadopago");
+
 
 const obtenerTodosLosProductosDelCarritoServices = async (idCarrito) => {
     try {
@@ -18,7 +20,7 @@ const obtenerTodosLosProductosDelCarritoServices = async (idCarrito) => {
 const agregarProductosCarritoServices = async (idCarrito, idProducto) => {
     try {
         const carrito = await CarritosModel.findOne({_id:idCarrito})
-        const producto = await ProductosModel.findOne({_id:idProducto})
+        /*const producto = await ProductosModel.findOne({_id:idProducto}) */
         const productoExiste = carrito.productos.find((prod) => prod._id.toString() === producto._id.toString())
         if(productoExiste) {
             return{
@@ -66,4 +68,54 @@ const eliminarProductoCarritoIdServices = async (idCarrito, idProducto) => {
     }
 }
 
-module.exports = { agregarProductosCarritoServices, eliminarProductoCarritoIdServices, obtenerTodosLosProductosDelCarritoServices }
+const mercadoPagoServices = async () => {
+    try {
+        const client = new MercadoPagoConfig({
+            accessToken: process.env.ACCESS_TOKEN_MP
+        });
+
+        const preference = new Preference(client);
+
+        const res = await preference.create({
+            body: {
+                items: [
+                    {
+                        title: "Membresía Gym",
+                        quantity: 1,
+                        unit_price: 2000,
+                        currency_id: "ARS"
+                    }
+                ],
+                back_urls: {
+                    success: "https://www.success.com",
+                    failure: "http://www.failure.com",
+                    pending: "http://www.pending.com"
+                },
+                auto_return: "approved"
+            }
+        });
+
+        console.log("Preferencia creada:", res);
+
+        return {
+            msg: "Preferencia creada con éxito",
+            preferenceId: res.id,
+            init_point: res.init_point, 
+            statusCode: 201
+        };
+    } catch (error) {
+        console.log("Error Mercado Pago:", error);
+        return {
+            error,
+            statusCode: 500
+        };
+    }
+};
+
+
+module.exports = { 
+    agregarProductosCarritoServices, 
+    eliminarProductoCarritoIdServices, 
+    obtenerTodosLosProductosDelCarritoServices,
+    mercadoPagoServices 
+};
