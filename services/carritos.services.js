@@ -1,4 +1,4 @@
-/*const ProductosModel = require("../models/productModel"); */
+
 const { MercadoPagoConfig, Preference } = require("mercadopago");
 
 
@@ -20,7 +20,7 @@ const obtenerTodosLosProductosDelCarritoServices = async (idCarrito) => {
 const agregarProductosCarritoServices = async (idCarrito, idProducto) => {
     try {
         const carrito = await CarritosModel.findOne({_id:idCarrito})
-        /*const producto = await ProductosModel.findOne({_id:idProducto}) */
+        
         const productoExiste = carrito.productos.find((prod) => prod._id.toString() === producto._id.toString())
         if(productoExiste) {
             return{

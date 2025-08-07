@@ -30,7 +30,7 @@ router.post("/login", iniciarSesion)
 router.post("/recoveryPass", recuperarPassUser)
 router.post("/changeNewPassUser", cambioPassUserToken)
 
-// Rutas agregadas para CRUD completo de usuarios:
+
 router.put("/:id", [
   check("id", "ERROR. El formato de ID no corresponde a MongoDB").isMongoId(),
   check("nombreUsuario", "Campo NOMBRE vacio").optional().notEmpty(),

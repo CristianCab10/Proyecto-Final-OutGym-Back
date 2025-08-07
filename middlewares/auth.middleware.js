@@ -1,9 +1,9 @@
 const jwt = require("jsonwebtoken");
 
 module.exports = (rolRuta) => (req, res, next) => {
-  // ✅ Extraer el token del header Authorization (con formato "Bearer token")
+
   const authHeader = req.header("Authorization")
-  const token = authHeader && authHeader.split(" ")[1]; // Divide en "Bearer" y el token
+  const token = authHeader && authHeader.split(" ")[1]; 
 
   if (!token) {
     return res.status(401).json({ msg: "Token no proporcionado" });
