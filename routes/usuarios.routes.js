@@ -13,11 +13,11 @@ const authMiddleware = require("../middlewares/auth.middleware")
 const { check } = require("express-validator")
 const router = Router()
 
-router.get("/", obtenerTodosLosUsuarios)
+router.post("/login", iniciarSesion)
+router.post("/recoveryPass", recuperarPassUser)
+router.post("/changeNewPassUser", cambioPassUserToken)
 
-router.get("/:id", [
-  check("id","ERROR. El formato de ID no corresponde a MongoDB").isMongoId()
-], obtenerUsuarioPorId)
+router.get("/", obtenerTodosLosUsuarios)
 
 router.post("/", [
   check("nombreUsuario", "Campo NOMBRE vacio").notEmpty(),
@@ -26,10 +26,9 @@ router.post("/", [
   check("password", "ERROR, debe tener un mínimo de 8 caracteres").isLength({ min:8 })
 ], crearNuevoUsuario)
 
-router.post("/login", iniciarSesion)
-router.post("/recoveryPass", recuperarPassUser)
-router.post("/changeNewPassUser", cambioPassUserToken)
-
+router.get("/:id", [
+  check("id","ERROR. El formato de ID no corresponde a MongoDB").isMongoId()
+], obtenerUsuarioPorId)
 
 router.put("/:id", [
   check("id", "ERROR. El formato de ID no corresponde a MongoDB").isMongoId(),
