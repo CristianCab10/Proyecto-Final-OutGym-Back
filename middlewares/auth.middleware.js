@@ -1,17 +1,27 @@
 const jwt = require("jsonwebtoken");
 
-//el 3er parametrro que recibe la funcion es un callback que se lo abrevia como cb o next
 module.exports = (rolRuta) => (req, res, next) => {
-  const token = req.header("auth");
-  console.log(token);
-  const verificarUsuario = jwt.verify(token, process.env.JWT_SECRET);
-  console.log(verificarUsuario);
+  // ✅ Extraer el token del header Authorization (con formato "Bearer token")
+  const authHeader = req.header("Authorization")
+  const token = authHeader && authHeader.split(" ")[1]; // Divide en "Bearer" y el token
 
-  if (rolRuta === verificarUsuario.rolUsuario) {
-    req.idCarrito = verificarUsuario.idCarrito;
-    req.idUsuario = verificarUsuario.idUsuario;
-    next();
-  } else {
-    res.status(401).json({ msg: "No estas autorizado" });
+  if (!token) {
+    return res.status(401).json({ msg: "Token no proporcionado" });
+  }
+
+  try {
+    const verificarUsuario = jwt.verify(token, process.env.JWT_SECRET);
+    console.log(verificarUsuario);
+
+    if (rolRuta === verificarUsuario.rolUsuario) {
+      req.idCarrito = verificarUsuario.idCarrito;
+      req.idUsuario = verificarUsuario.idUsuario;
+      next();
+    } else {
+      res.status(401).json({ msg: "No estás autorizado" });
+    }
+  } catch (error) {
+    res.status(401).json({ msg: "Token inválido" });
   }
 };
+

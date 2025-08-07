@@ -7,8 +7,11 @@ const path = require("path");
 const bookingsRoutes = require('./routes/bookings');
 const mongoose = require('mongoose');
 require('dotenv').config();
+const productosRoutes = require("./routes/productos.routes");
 
 //middlewares
+
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/public", express.static(path.join(__dirname, "public")));
@@ -18,6 +21,8 @@ app.use(morgan("dev"));
 app.use("/usuarios", require("./routes/usuarios.routes"))
 app.use("/carritos", require("./routes/carritos.routes"))
 app.use('/bookings', bookingsRoutes);
+app.use("/uploads", express.static("uploads"));
+
 
 mongoose.connect(process.env.MONGO_CONNECT, {
   useNewUrlParser: true,
@@ -29,5 +34,5 @@ mongoose.connect(process.env.MONGO_CONNECT, {
 })
 .catch(err => console.error('Error al conectar MongoDB:', err));
 app.use("/api/carrito", require("./routes/carritos.routes"));
-app.use("/productos", require("./routes/productos.routes"));
+app.use("/api/productos", require("./routes/productos.routes"));
 
