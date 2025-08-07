@@ -18,8 +18,11 @@ app.use("/public", express.static(path.join(__dirname, "public")));
 /* app.use(cors()); */
 app.use(cors({
   origin: 'https://proyecto-final-out-gym-front-snowy.vercel.app',
-  credentials: true 
+  credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
+
 app.use(morgan("dev"));
 
 app.use("/usuarios", require("./routes/usuarios.routes"))
