@@ -39,7 +39,7 @@ const crearEditarImagen = async (req, res) => {
 
     const nombreImagen = req.file.filename;
 
-    // Actualizar producto con el nombre de la imagen
+    
     const productoActualizado = await ProductosModel.findByIdAndUpdate(
       idProducto,
       { imagen: nombreImagen },

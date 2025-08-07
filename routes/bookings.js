@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Booking = require('../models/Booking');
 
-// Obtener todas las reservas ordenadas por fecha y hora
+
 router.get('/', async (req, res) => {
   try {
     const bookings = await Booking.find().sort({ date: 1, time: 1 });
@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-// Obtener todas las reservas de un usuario por su userId
+
 router.get('/user/:userId', async (req, res) => {
   try {
     const { userId } = req.params;
@@ -25,7 +25,7 @@ router.get('/user/:userId', async (req, res) => {
   }
 });
 
-// Crear una nueva reserva
+
 router.post('/', async (req, res) => {
   try {
     const { classType, date, time, name, email, userId } = req.body;
@@ -45,7 +45,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-// Obtener cantidad de reservas para una clase, fecha y hora
+
 router.get('/count', async (req, res) => {
   try {
     const { classType, date, time } = req.query;
@@ -57,7 +57,7 @@ router.get('/count', async (req, res) => {
   }
 });
 
-// Cancelar una reserva por ID
+
 router.delete('/:id', async (req, res) => {
   try {
     const result = await Booking.findByIdAndDelete(req.params.id);
