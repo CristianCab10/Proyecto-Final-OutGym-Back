@@ -15,7 +15,11 @@ const productosRoutes = require("./routes/productos.routes");
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/public", express.static(path.join(__dirname, "public")));
-app.use(cors());
+/* app.use(cors()); */
+app.use(cors({
+  origin: 'https://proyecto-final-out-gym-front-snowy.vercel.app',
+  credentials: true 
+}));
 app.use(morgan("dev"));
 
 app.use("/usuarios", require("./routes/usuarios.routes"))
@@ -24,7 +28,7 @@ app.use('/bookings', bookingsRoutes);
 app.use("/uploads", express.static("uploads"));
 
 
-mongoose.connect(process.env.MONGO_CONNECT, {
+/* mongoose.connect(process.env.MONGO_CONNECT, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
@@ -32,7 +36,7 @@ mongoose.connect(process.env.MONGO_CONNECT, {
   console.log('Mongo conectado');
   app.listen(3001, () => console.log('Servidor corriendo en http://localhost:3001'));
 })
-.catch(err => console.error('Error al conectar MongoDB:', err));
+.catch(err => console.error('Error al conectar MongoDB:', err)); */
 app.use("/api/carrito", require("./routes/carritos.routes"));
 app.use("/api/productos", require("./routes/productos.routes"));
 
