@@ -12,10 +12,13 @@ app.use("/public", express.static(path.join(__dirname, "public")));
 app.use(cors());
 app.use(morgan("dev"));
 
-//rutas
+app.use("/usuarios", require("./routes/usuarios.routes"))
+app.use("/carritos", require("./routes/carritos.routes"))
+app.use("/api/carrito", require("./routes/carritos.routes"));
 app.use("/productos", require("./routes/productos.routes"));
-app.use("/usuarios", require("./routes/usuarios.routes"));
-app.use("/carritos", require("./routes/carritos.routes"));
+
+
+
 
 app.listen(3001, () => {
   console.log("Servidor andando en el puerto", 3001);
