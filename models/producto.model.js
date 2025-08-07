@@ -17,7 +17,7 @@ const ProductoSchema = new mongoose.Schema({
   },
   imagen: {
     type: String,
-    default: "url",
+    
   },
   habilitado: {
     type: Boolean,

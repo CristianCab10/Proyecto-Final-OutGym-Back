@@ -7,13 +7,18 @@ const obtenerTodosLosUsuarios = async (req,res) => {
 }
 
 const obtenerUsuarioPorId = async (req, res) => {
-    const errors = validationResult(req)
-    if (!errors.isEmpty()) {
-        res.status(422).json({ msg: "Se encontraron errores en el servidor", errors: errors.array() })
-    }
-    const {statusCode, usuario} = await obtenerUsuarioPorIdServices(req.params.id)
-    res.status(statusCode).json({ usuario })
-}
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(422).json({
+      msg: "Se encontraron errores en el servidor",
+      errors: errors.array(),
+    });
+  }
+
+  const { statusCode, usuario } = await obtenerUsuarioPorIdServices(req.params.id);
+
+  res.status(statusCode).json(usuario); 
+};
 
 const crearNuevoUsuario = async (req, res) => {
     const errors = validationResult(req)
