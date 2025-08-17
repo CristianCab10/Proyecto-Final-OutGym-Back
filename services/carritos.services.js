@@ -1,4 +1,3 @@
-
 const { MercadoPagoConfig, Preference } = require("mercadopago");
 
 
@@ -68,10 +67,10 @@ const eliminarProductoCarritoIdServices = async (idCarrito, idProducto) => {
     }
 }
 
-const mercadoPagoServices = async () => {
+const mercadoPagoServices = async (carrito) => {
     try {
         const client = new MercadoPagoConfig({
-            accessToken: process.env.ACCESS_TOKEN_MP
+            accessToken: `${process.env.ACCESS_TOKEN_MP}`
         });
 
         const preference = new Preference(client);
@@ -112,10 +111,51 @@ const mercadoPagoServices = async () => {
     }
 };
 
+const mercadoPagoServicess = async (plan) => {
+   try {
+    const client = new MercadoPagoConfig({
+      accessToken: process.env.ACCESS_TOKEN_MP,
+    });
+
+    const preference = new Preference(client);
+
+    const res = await preference.create({
+      body: {
+        items: [
+          {
+            title: plan.nombre,
+            quantity: 1,
+            unit_price: plan.precio,
+            currency_id: "ARS",
+          },
+        ],
+        back_urls: {
+          success: "https://tu-dominio.com/pago-exitoso",
+          failure: "https://tu-dominio.com/pago-fallido",
+          pending: "https://tu-dominio.com/pago-pendiente",
+        },
+        auto_return: "approved",
+      },
+    });
+
+    return {
+      msg: "Preferencia creada con éxito",
+      init_point: res.init_point,  // sin .body
+      statusCode: 201,
+    };
+  } catch (error) {
+    console.error("Error Mercado Pago:", error);
+    return {
+      error,
+      statusCode: 500,
+    };
+  }
+};
+
 
 module.exports = { 
     agregarProductosCarritoServices, 
     eliminarProductoCarritoIdServices, 
     obtenerTodosLosProductosDelCarritoServices,
-    mercadoPagoServices 
+    mercadoPagoServices, mercadoPagoServicess 
 };
