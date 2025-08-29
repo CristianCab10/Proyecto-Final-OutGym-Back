@@ -1,0 +1,467 @@
+[33mcommit d98c2e31b775c529d149ce9d0e4eb29b68810df6[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Esteban <cordobaesteban77@gmail.com>
+Date:   Fri Aug 29 11:42:05 2025 -0300
+
+    vuelvo a borrar el /usuarios
+
+[33mcommit 7c96302c1cb026588087762a3fd4624e213aee54[m
+Author: Esteban <cordobaesteban77@gmail.com>
+Date:   Fri Aug 29 11:34:17 2025 -0300
+
+    vuelvo a cambiar la url poniendo /usuarios
+
+[33mcommit 7eefbea6196bae30872cc4fd43b3111e6a623c6b[m
+Author: Esteban <cordobaesteban77@gmail.com>
+Date:   Fri Aug 29 11:28:30 2025 -0300
+
+    vuelvo a modificar la url de recuperar contraseña
+
+[33mcommit 8884e501b22aa81240b752d043b4307139b2a78f[m
+Author: Esteban <cordobaesteban77@gmail.com>
+Date:   Fri Aug 29 11:23:38 2025 -0300
+
+    vuelvo a modificar la url agregando/usuarios
+
+[33mcommit 02c31cbfee7cf1d1af4efcca8ffaef927ce1234a[m
+Author: Esteban <cordobaesteban77@gmail.com>
+Date:   Fri Aug 29 11:08:00 2025 -0300
+
+    vuelvo a cambiar la url del correo para recuperar la contraseña por la url del front deployado
+
+[33mcommit 162d0551fbb5facc45cc7b81de57e3cbbe917fad[m
+Author: Esteban <cordobaesteban77@gmail.com>
+Date:   Fri Aug 29 11:03:53 2025 -0300
+
+    actualizo la url que se manda al correo para cambiar la contraseña
+
+[33mcommit 4affd2db323749729c62a41b8b6929f5530cfe11[m
+Author: Esteban <cordobaesteban77@gmail.com>
+Date:   Fri Aug 29 09:50:55 2025 -0300
+
+    modifico el index para poder hacer peticiones con el front deployado
+
+[33mcommit 473b2ba1bfb41631b1cba5ab006dba2f16ad9d9d[m
+Author: Esteban <cordobaesteban77@gmail.com>
+Date:   Fri Aug 29 09:05:10 2025 -0300
+
+    hago que el .env no se vuelva a subir a github
+
+[33mcommit 72011d84a765494028a69243c47b03f8bc1411d8[m
+Merge: 4078f98 5d9dd9f
+Author: cristian <cristiancabre10@gmail.com>
+Date:   Thu Aug 28 00:29:20 2025 -0300
+
+    se trajeron cambios de main
+
+[33mcommit 4078f98c80a26c1eacfa5a0b2088dc8950a5e73e[m[33m ([m[1;31morigin/dev[m[33m)[m
+Merge: dafaf00 b2b1ec9
+Author: Cristian Cabrera <cristiancabre10@gmail.com>
+Date:   Wed Aug 27 23:20:04 2025 -0300
+
+    Merge pull request #17 from CristianCab10/feature/recoverypassword
+    
+    se creo modulo de recuperar password
+
+[33mcommit b2b1ec9acfdc545267b72ac34b2de10bdd889a65[m
+Author: cristian <cristiancabre10@gmail.com>
+Date:   Tue Aug 26 23:29:53 2025 -0300
+
+    se creo modulo de recuperar password
+
+[33mcommit dafaf003a845fd3f1bebe820cb3127fa28e48d55[m[33m ([m[1;32mfix-mostrar-planes[m[33m)[m
+Merge: 62410d9 4434acc
+Author: Cristian Cabrera <cristiancabre10@gmail.com>
+Date:   Sun Aug 17 18:54:20 2025 -0300
+
+    Merge pull request #16 from CristianCab10/fix-mp
+    
+    Fix mp
+
+[33mcommit 4434acce3a3096a5e2d656e66736c883068e8457[m[33m ([m[1;31morigin/fix-mp[m[33m, [m[1;32mfix-mp[m[33m)[m
+Author: Esteban <cordobaesteban77@gmail.com>
+Date:   Sat Aug 16 05:27:37 2025 -0300
+
+    actualizo el .env.example
+
+[33mcommit 22ef2f78fc23ad7f49e86b078015212871561ed9[m
+Author: Esteban <cordobaesteban77@gmail.com>
+Date:   Thu Aug 14 08:30:28 2025 -0300
+
+    agrego nueva funcion de mercado pago para los planes pero falta hacer la prueba definitiva
+
+[33mcommit 62410d9401d2a21cb2876c3613c58c59fef7c500[m
+Author: Esteban <cordobaesteban77@gmail.com>
+Date:   Wed Aug 13 03:06:02 2025 -0300
+
+    elimino el .env para que deje de subirse a github
+
+[33mcommit 5d9dd9fdec48e893514958547ddc1310f2721c16[m
+Merge: 8997e4d d2f0b76
+Author: cordobaesteban77 <cordobaesteban77@gmail.com>
+Date:   Thu Aug 7 20:52:57 2025 -0300
+
+    Merge pull request #15 from cordobaesteban77/main
+    
+    Merge pull request #4 from CristianCab10/main
+
+[33mcommit d2f0b76a1d4a1787a8f281489dcfd1d4dd6a27f8[m
+Merge: 0b80748 8997e4d
+Author: cordobaesteban77 <cordobaesteban77@gmail.com>
+Date:   Thu Aug 7 20:50:47 2025 -0300
+
+    Merge pull request #4 from CristianCab10/main
+    
+    cambio de config cors
+
+[33mcommit 8997e4d942f96ac5ccc217b1d56ab61b4bf0c0aa[m
+Merge: 19539a8 0b80748
+Author: cordobaesteban77 <cordobaesteban77@gmail.com>
+Date:   Thu Aug 7 20:49:13 2025 -0300
+
+    Merge pull request #14 from cordobaesteban77/main
+    
+    Merge pull request #3 from CristianCab10/main
+
+[33mcommit 19539a8b856616e4347050427ff84e4819ca7255[m
+Author: Córdoba Esteban Augusto <cordobaesteban77@gmail.com>
+Date:   Thu Aug 7 20:47:44 2025 -0300
+
+    se cambia config de cors
+
+[33mcommit 0b8074821cbc38980907bc6fe520da6d5fdd685e[m
+Merge: a631584 bc8fcd4
+Author: cordobaesteban77 <cordobaesteban77@gmail.com>
+Date:   Thu Aug 7 20:38:39 2025 -0300
+
+    Merge pull request #3 from CristianCab10/main
+    
+    cambio de oroden rutas
+
+[33mcommit bc8fcd42753e03a64909d14ca503db4a0d116815[m
+Merge: ce057b3 9c3b097
+Author: Córdoba Esteban Augusto <cordobaesteban77@gmail.com>
+Date:   Thu Aug 7 20:36:31 2025 -0300
+
+    Merge branch 'main' of https://github.com/CristianCab10/Proyecto-Final-OutGym-Back
+
+[33mcommit ce057b38fad966fc978ddef79d06886ad9741481[m
+Author: Córdoba Esteban Augusto <cordobaesteban77@gmail.com>
+Date:   Thu Aug 7 20:36:21 2025 -0300
+
+    se cambia el orden de las rutas
+
+[33mcommit 9c3b097efff8f780b5f4558c8d3d776a4324a08f[m
+Merge: 0d8bc40 a631584
+Author: cordobaesteban77 <cordobaesteban77@gmail.com>
+Date:   Thu Aug 7 20:33:13 2025 -0300
+
+    Merge pull request #13 from cordobaesteban77/main
+    
+    Merge pull request #2 from CristianCab10/main
+
+[33mcommit a6315846cefbc3f7529417afac33f695c9d729fa[m
+Merge: 95de597 0d8bc40
+Author: cordobaesteban77 <cordobaesteban77@gmail.com>
+Date:   Thu Aug 7 20:32:44 2025 -0300
+
+    Merge pull request #2 from CristianCab10/main
+    
+    cors
+
+[33mcommit 0d8bc401f6cdc0780c57d6adddafc0c958a8c8ec[m
+Merge: 9a4b325 3450de3
+Author: Córdoba Esteban Augusto <cordobaesteban77@gmail.com>
+Date:   Thu Aug 7 20:30:45 2025 -0300
+
+    Merge branch 'main' of https://github.com/CristianCab10/Proyecto-Final-OutGym-Back
+
+[33mcommit 9a4b3252f4794e29c3e31b9329486567829bb202[m
+Author: Córdoba Esteban Augusto <cordobaesteban77@gmail.com>
+Date:   Thu Aug 7 20:30:32 2025 -0300
+
+    se agrega url al cors especifico
+
+[33mcommit 3450de3d32cd2cfe26a591d8195a59dfda273962[m
+Merge: fc34dc1 95de597
+Author: cordobaesteban77 <cordobaesteban77@gmail.com>
+Date:   Thu Aug 7 19:37:19 2025 -0300
+
+    Merge pull request #12 from cordobaesteban77/main
+    
+    Merge pull request #1 from CristianCab10/main
+
+[33mcommit 95de5977b7ee411ac37aa8a61f2bf7532b91520f[m
+Merge: 2e35d4b fc34dc1
+Author: cordobaesteban77 <cordobaesteban77@gmail.com>
+Date:   Thu Aug 7 19:20:46 2025 -0300
+
+    Merge pull request #1 from CristianCab10/main
+    
+    cambios en env y conection
+
+[33mcommit fc34dc1df947dc22b972cb62d968b333621fb906[m
+Author: Córdoba Esteban Augusto <cordobaesteban77@gmail.com>
+Date:   Thu Aug 7 19:10:35 2025 -0300
+
+    cofig uri mongo
+
+[33mcommit f6a319e65a6e760970e9a38b69c61285c3c61482[m
+Author: Córdoba Esteban Augusto <cordobaesteban77@gmail.com>
+Date:   Thu Aug 7 18:13:02 2025 -0300
+
+    acepto cambios en .env
+
+[33mcommit 2e35d4ba0ffb4f86b68960c02d05754c93e112e9[m
+Author: Córdoba Esteban Augusto <cordobaesteban77@gmail.com>
+Date:   Thu Aug 7 18:06:34 2025 -0300
+
+    hago el archivo para deployar en vercel
+
+[33mcommit 8c81a667d1c0576f90d976eb69716f3059f78daa[m
+Merge: b9c89c5 d02b961
+Author: Cristian Cabrera <cristiancabre10@gmail.com>
+Date:   Thu Aug 7 17:44:02 2025 -0300
+
+    Merge pull request #11 from CristianCab10/dev
+    
+    Dev
+
+[33mcommit d02b9610cc5c5a4f9a4cde4df74de812766f0b46[m
+Merge: 181525e 698204d
+Author: Laura42-code <snhsd2013@gmail.com>
+Date:   Thu Aug 7 17:24:41 2025 -0300
+
+    Merge pull request #10 from CristianCab10/feature_nodemailer
+    
+    Feature nodemailer
+
+[33mcommit 698204d8d77e36597bd2bc9e9f527210def773b9[m[33m ([m[1;31morigin/feature_nodemailer[m[33m)[m
+Merge: 90748ec 181525e
+Author: Maria Laura <snhsd2013@gmail.com>
+Date:   Thu Aug 7 17:20:40 2025 -0300
+
+    se trajo cambios de rama dev
+
+[33mcommit 90748ecc4c8655388a3507aa3cb8dadf0c602c16[m
+Author: Maria Laura <snhsd2013@gmail.com>
+Date:   Thu Aug 7 17:18:32 2025 -0300
+
+    realizacion de mail de bienvenida y recupero de contraseña
+
+[33mcommit 181525eb1fd215e1e76c4651a308dcd886cc1a07[m
+Merge: bcdf88a c2473ac
+Author: Cristian Cabrera <cristiancabre10@gmail.com>
+Date:   Thu Aug 7 17:04:31 2025 -0300
+
+    Merge pull request #9 from CristianCab10/fix/rutas
+    
+    se corrigio error en la ruta de producto
+
+[33mcommit c2473ac5c2601c6caaffbf46cabf1ba9f2adeebe[m[33m ([m[1;31morigin/fix/rutas[m[33m)[m
+Author: cristian <cristiancabre10@gmail.com>
+Date:   Thu Aug 7 17:03:39 2025 -0300
+
+    se corrigio error en la ruta de producto
+
+[33mcommit bcdf88a0a6c81e9b9588fdfb6131253db4860c32[m
+Merge: 4186cc5 52d5e83
+Author: Cristian Cabrera <cristiancabre10@gmail.com>
+Date:   Thu Aug 7 16:55:04 2025 -0300
+
+    Merge pull request #8 from CristianCab10/feature/tablaclases
+    
+    Feature/tablaclases
+
+[33mcommit 52d5e83fa85d2dfa90d0bffa32400904c7085a6d[m[33m ([m[1;31morigin/feature/tablaclases[m[33m)[m
+Merge: 8c29d72 4186cc5
+Author: cristian <cristiancabre10@gmail.com>
+Date:   Thu Aug 7 16:54:09 2025 -0300
+
+    se solucionaron conflictos con la rama dev
+
+[33mcommit 8c29d726672e2799cecbe89e532ae779aeab4d33[m
+Author: cristian <cristiancabre10@gmail.com>
+Date:   Thu Aug 7 16:52:31 2025 -0300
+
+    se creo la conexion para que mande el userId de la clase al front
+
+[33mcommit 4186cc58f64cd1624ec01370cf9f98d44f8ce862[m
+Merge: 29cee84 d454be7
+Author: Cristian Cabrera <cristiancabre10@gmail.com>
+Date:   Thu Aug 7 14:22:59 2025 -0300
+
+    Merge pull request #7 from CristianCab10/feature/conexionproductos
+    
+    se creo las conexiones de los productos con el front y el back con lo…
+
+[33mcommit d454be784a68430ca9eb04c7f86d9c19fce1ddcf[m[33m ([m[1;31morigin/feature/conexionproductos[m[33m)[m
+Author: cristian <cristiancabre10@gmail.com>
+Date:   Thu Aug 7 14:22:06 2025 -0300
+
+    se creo las conexiones de los productos con el front y el back con los metodos get,post,put,delete
+
+[33mcommit 29cee84508c8829a231b12faac01213133c8a4cd[m
+Merge: 7e28a8e 0aa71eb
+Author: Cristian Cabrera <cristiancabre10@gmail.com>
+Date:   Wed Aug 6 21:48:56 2025 -0300
+
+    Merge pull request #6 from CristianCab10/feature/clasesturno
+    
+    Feature/clasesturno
+
+[33mcommit 0aa71ebda41d1d56fb11b78a8a0892a7c0e7a07f[m[33m ([m[1;31morigin/feature/clasesturno[m[33m)[m
+Merge: 8eac264 7e28a8e
+Author: cristian <cristiancabre10@gmail.com>
+Date:   Wed Aug 6 21:47:36 2025 -0300
+
+    se soluciono merge entre rama dev y feature/claseturno
+
+[33mcommit 7e28a8e8f5852cecd2fe0f5acf082dc01e0896a0[m
+Merge: 6756cc0 24c92ed
+Author: marestofanceballos <134449653+marestofanceballos@users.noreply.github.com>
+Date:   Wed Aug 6 21:32:15 2025 -0300
+
+    Merge pull request #5 from CristianCab10/feature-mercadopago
+    
+    Feature mercadopago
+
+[33mcommit 24c92ede7ecdb345cd326460df5b5d45413928f8[m[33m ([m[1;31morigin/feature-mercadopago[m[33m)[m
+Merge: c2ef747 6756cc0
+Author: Mariana Estofan Ceballos <mariana@example.com>
+Date:   Wed Aug 6 21:29:51 2025 -0300
+
+    solucione  conflicto con dev y la ruta de producto
+
+[33mcommit c2ef747ea58cf4fe3c75dbf0f22f5559c95200ca[m
+Author: Mariana Estofan Ceballos <mariana@example.com>
+Date:   Wed Aug 6 21:22:43 2025 -0300
+
+    se integro el mercado pago
+
+[33mcommit 6756cc0f92a8b93ea6d08ed8a2eba0b431a57e69[m
+Merge: 8c176c9 b9c04ff
+Author: danisuarze <danisuarze@gmail.com>
+Date:   Wed Aug 6 21:09:01 2025 -0300
+
+    Merge pull request #4 from CristianCab10/feature-productos
+    
+    Feature productos
+
+[33mcommit b9c04ffb7ef34cb92799232af904cfd2a2e6adf4[m[33m ([m[1;31morigin/feature-productos[m[33m)[m
+Merge: 01a6187 8c176c9
+Author: Daniel <danisuarze@gmail.com>
+Date:   Wed Aug 6 21:07:35 2025 -0300
+
+    Se resuelven conflictos de dev con rama feature-productos
+
+[33mcommit 01a6187993e571fc09f68e734166dc1dc3b694ce[m
+Author: Daniel <danisuarze@gmail.com>
+Date:   Wed Aug 6 21:04:59 2025 -0300
+
+    Subo productos vinculando a base de datos
+
+[33mcommit 8c176c946ad05ff227c1d460fa8f44fc34ba838d[m
+Merge: 781f0e9 bb33352
+Author: cordobaesteban77 <cordobaesteban77@gmail.com>
+Date:   Wed Aug 6 20:30:17 2025 -0300
+
+    Merge pull request #3 from CristianCab10/feature-manage-user-admin
+    
+    agrego el actualizar y eliminar usuario
+
+[33mcommit b9c89c562cd1977be1c4182fe2d9b71c7ee64de6[m
+Merge: 6f58680 bb33352
+Author: cordobaesteban77 <cordobaesteban77@gmail.com>
+Date:   Wed Aug 6 20:28:35 2025 -0300
+
+    Merge pull request #2 from CristianCab10/feature-manage-user-admin
+    
+    Feature manage user admin
+
+[33mcommit 8eac264642c3ae5bfade451e4a537296a96737bd[m
+Author: cristian <cristiancabre10@gmail.com>
+Date:   Wed Aug 6 20:18:23 2025 -0300
+
+    se creo tabla de turnos para el admin con boton de cancelar y formulario de reserva de turno
+
+[33mcommit bb33352fe193ce97f996cd414bcde3eb3f21d0a4[m[33m ([m[1;31morigin/feature-manage-user-admin[m[33m, [m[1;32mfeature-manage-user-admin[m[33m)[m
+Author: Esteban <cordobaesteban77@gmail.com>
+Date:   Tue Aug 5 07:38:30 2025 -0300
+
+    agrego el actualizar y eliminar usuario
+
+[33mcommit 781f0e9b11b5451d1fdd45906cc48769276ccdde[m[33m ([m[1;32mfeature-usuarios[m[33m)[m
+Merge: 361e42a a1f8cce
+Author: cordobaesteban77 <cordobaesteban77@gmail.com>
+Date:   Sun Aug 3 20:50:38 2025 -0300
+
+    Merge pull request #1 from CristianCab10/feature-usuarios
+    
+    Feature usuarios
+
+[33mcommit a1f8cce2647779202b634319fa9dc8df4d249367[m[33m ([m[1;31morigin/feature-usuarios[m[33m)[m
+Merge: 4492c8c 361e42a
+Author: cordobaesteban77 <cordobaesteban77@gmail.com>
+Date:   Sun Aug 3 20:50:15 2025 -0300
+
+    Merge branch 'dev' into feature-usuarios
+
+[33mcommit 4492c8c32e80d8518753ca2d2d22bc2264f84e4b[m
+Author: Esteban <cordobaesteban77@gmail.com>
+Date:   Sat Aug 2 20:44:24 2025 -0300
+
+    agrego la variable de entorno de jwt
+
+[33mcommit 1de416d7acbe5aaa4989b6b842d5a78c2f48208f[m
+Author: Esteban <cordobaesteban77@gmail.com>
+Date:   Sat Aug 2 08:07:17 2025 -0300
+
+    cambio la propiedad rolUsuario para crear un admin
+
+[33mcommit 107e26bbf247b328e69663602c535980451a2581[m
+Author: Esteban <cordobaesteban77@gmail.com>
+Date:   Sat Aug 2 07:46:48 2025 -0300
+
+    hago la coneccion con mongodb
+
+[33mcommit 4eeb650dfd80fc971dc2f97a4bfdbc7b0e5e3db9[m
+Author: Esteban <cordobaesteban77@gmail.com>
+Date:   Thu Jul 31 22:09:01 2025 -0300
+
+    comento la linea 28 de usuarios.services para que no mande el mail de registro exitoso
+
+[33mcommit 9a3be26a8895a80561e969f1887963e4eca71dda[m
+Author: Esteban <cordobaesteban77@gmail.com>
+Date:   Thu Jul 31 20:01:49 2025 -0300
+
+    corrijo el nombre de la propiedad rolUsuario
+
+[33mcommit ddfadc3e539ce683fc33091fbdabe32c2a5c1d21[m
+Author: Esteban <cordobaesteban77@gmail.com>
+Date:   Fri Jul 25 21:37:41 2025 -0300
+
+    cambio el nombre de la propiedad rol
+
+[33mcommit 6595f1a5c073089ad3e73d3d56bd65e771267e0a[m
+Author: Esteban <cordobaesteban77@gmail.com>
+Date:   Tue Jul 22 20:39:00 2025 -0300
+
+    creo el carrito de usuario
+
+[33mcommit 361e42a084384a1a5084048cabef7151cdd131a2[m
+Author: cristian <cristiancabre10@gmail.com>
+Date:   Mon Jul 21 22:24:41 2025 -0300
+
+    se creo rama dev
+
+[33mcommit c7b7110d705fee4f836d4eed619d0c066fd28fd2[m
+Author: Esteban <cordobaesteban77@gmail.com>
+Date:   Mon Jul 21 22:12:51 2025 -0300
+
+    hago el back de usuarios y el modelo de carrito
+
+[33mcommit 6f586804f200332ad2cc64b735305c0298ae233f[m
+Author: cristian <cristiancabre10@gmail.com>
+Date:   Sat Jul 19 13:46:01 2025 -0300
+
+    se creo estructura base
