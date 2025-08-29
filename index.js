@@ -1,5 +1,6 @@
 require("dotenv").config();
 require("./db/config.db");
+
 const express = require("express");
 const app = express();
 const cors = require("cors");
@@ -7,10 +8,26 @@ const morgan = require("morgan");
 const path = require("path");
 const mongoose = require("mongoose");
 
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://proyecto-final-out-gym-front-iota.vercel.app"
+];
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan("dev"));
-app.use(cors({ origin: "http://localhost:5173", credentials: true }));
+
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  credentials: true
+}));
+
 app.use("/public", express.static(path.join(__dirname, "public")));
 app.use("/uploads", express.static("uploads"));
 
@@ -26,3 +43,4 @@ mongoose.connect(process.env.MONGO_CONNECT, { useNewUrlParser: true, useUnifiedT
     app.listen(3001, () => console.log("Servidor corriendo en http://localhost:3001"));
   })
   .catch(err => console.error("Error al conectar MongoDB:", err));
+
