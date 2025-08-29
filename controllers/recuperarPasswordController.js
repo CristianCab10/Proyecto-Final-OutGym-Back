@@ -22,7 +22,7 @@ const forgotPasswordController = async (req, res) => {
       },
     });
 
-    const resetURL = `https://proyecto-final-out-gym-front-iota.vercel.app/reset-password/${token}`;
+    const resetURL = `https://proyecto-final-out-gym-front-iota.vercel.app/usuarios/reset-password/${token}`;
 
     await transporter.sendMail({
       from: process.env.GMAIL_APP_USER,
